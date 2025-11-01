@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class HomeTemperture extends StatelessWidget {
   const HomeTemperture({
     super.key,
-  });
+    required this.temp,
 
+  });
+  final num temp;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,7 +14,7 @@ class HomeTemperture extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '45',
+          temp.toInt().toString(),
           style: TextStyle(
             color: Colors.white,
             fontSize: 100,
