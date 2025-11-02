@@ -147,9 +147,35 @@ class WeatherData {
   factory WeatherData.fromJson(String source) => WeatherData.fromMap(json.decode(source) as Map<String, dynamic>);
 }
 
+class WeatherDetails {
+  Main main;
+  Weather weather;
+  String dt_txt;
+  WeatherDetails({
+    required this.main,
+    required this.weather,
+    required this.dt_txt,
+  });
 
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'main': main.toMap(),
+      'weather': weather.toMap(),
+      'dt_txt': dt_txt,
+    };
+  }
 
+  factory WeatherDetails.fromMap(Map<String, dynamic> map) {
+    return WeatherDetails(
+      main: Main.fromMap(map['main'] as Map<String,dynamic>),
+      weather: Weather.fromMap(map['weather'][0] as Map<String,dynamic>),
+      dt_txt: map['dt_txt'] as String,
+    );
+  }
 
+  String toJson() => json.encode(toMap());
 
+  factory WeatherDetails.fromJson(String source) => WeatherDetails.fromMap(json.decode(source) as Map<String, dynamic>);
+}
 
 
