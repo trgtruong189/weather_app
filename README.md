@@ -1,16 +1,36 @@
-# weather_app
+# 🌤️ Weather App
 
-A new Flutter project.
+Ứng dụng Flutter hiển thị thông tin thời tiết theo vị trí hiện tại hoặc thành phố nhập vào.  
+Dự án được xây dựng bằng **Flutter + Dart**, kết hợp với **OpenWeatherMap API** để lấy dữ liệu thời tiết theo thời gian thực.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Tính năng chính
 
-A few resources to get you started if this is your first Flutter project:
+- Xem thời tiết hiện tại theo vị trí hoặc tên thành phố.  
+- Hiển thị:
+  - 🌡️ Nhiệt độ
+  - 🌦️ Trạng thái thời tiết
+  - 💧 Độ ẩm
+  - 🌬️ Tốc độ gió
+- Giao diện đơn giản, hiện đại, dễ sử dụng.
+- Hỗ trợ đa nền tảng: Android, iOS, Web, macOS, Windows, Linux.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧰 Công nghệ sử dụng
+
+- **Flutter** – Framework chính để xây dựng giao diện đa nền tảng.  
+- **Dart** – Ngôn ngữ lập trình của Flutter.  
+- **Dio** – Thư viện HTTP để gọi API.  
+- **Provider** – Quản lý trạng thái ứng dụng.  
+- **OpenWeatherMap API** – Nguồn dữ liệu thời tiết.
+
+---
+
+## ⚙️ Cài đặt & chạy thử
+
+### 1️⃣ Clone project
+```bash
+git clone https://github.com/trgtruong189/weather_app.git
+cd weather_app
