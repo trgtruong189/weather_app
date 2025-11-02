@@ -22,7 +22,7 @@ class DeltailPage extends StatelessWidget {
         future: context.read<WeatherProvider>().getWeatherDetails(),
         builder: (context, asyncSnapshot) {
           if (asyncSnapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator(color: Colors.white);
+              return Center(child: CircularProgressIndicator(color: Colors.white));
             }
             if (asyncSnapshot.hasError) {
               return Text('Error: ${asyncSnapshot.error}');
