@@ -16,10 +16,10 @@ class ApiRepository {
     }
    }
 
-   static Future<List<WeatherDetails>> callAPIGetWeatherDetails() async {
+   static Future<List<WeatherDetails>> callAPIGetWeatherDetails(Position? position) async {
     try {
       final dio = Dio();
-    final res = await dio.get('https://api.openweathermap.org/data/2.5/forecast?lat=21,02838&lon=105,85373&units=metric&appid=${MyKey.api_token}');
+    final res = await dio.get('https://api.openweathermap.org/data/2.5/forecast?lat=${position?.latitude}&lon=${position?.longitude}&units=metric&appid=${MyKey.api_token}');
     List data = res.data['list'];
       List<WeatherDetails> resuft = 
        List<WeatherDetails>.from(data.map((e) => WeatherDetails.fromMap(e))).toList();

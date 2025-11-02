@@ -37,7 +37,7 @@ class DeltailPage extends StatelessWidget {
                 children: [
                   Icon(CupertinoIcons.location),
                   SizedBox(width: 15,),
-                  Text('Ha Noi', style: TextStyle(color: Colors.white, fontSize: 20),),
+                  Text(context.read<WeatherProvider>().cityName, style: TextStyle(color: Colors.white, fontSize: 20),),
                 ],
               ),
               actions: [
